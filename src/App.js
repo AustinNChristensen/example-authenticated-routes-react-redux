@@ -5,6 +5,7 @@ import { Home } from './Home/Home';
 import { Profile } from './Profile/Profile';
 import { Login } from './Auth/Login';
 import './App.css'
+import { ProtectedRoute } from './Common/ProtectedRoute';
 
 export const App = () => {
   return (
@@ -14,9 +15,9 @@ export const App = () => {
               <Route path={'/'} exact>
                   <Home />
               </Route>
-              <Route path={'/profile'}>
+              <ProtectedRoute path={'/profile'}>
                   <Profile />
-              </Route>
+              </ProtectedRoute>
               <Route path={'/login'}>
                   <Login />
               </Route>
